@@ -13,14 +13,7 @@ import httpx
 class BasketballChatbot:
     def __init__(self, csv_path: str = 'NBA-playerlist.csv'):
         self.players_data = self._load_players_csv(csv_path)
-        # Read optional proxy from env (if set)
-        proxy_url = os.getenv("PROXY_URL") or os.getenv("HTTP_PROXY") or os.getenv("HTTPS_PROXY")
-
-        if proxy_url:
-            client = httpx.Client(proxies=proxy_url)
-            self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), http_client=client)
-        else:
-            self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
         # Hardcoded NBA champions from 2022-2024
         self.nba_champions = {
