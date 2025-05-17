@@ -6,6 +6,7 @@ import json
 from typing import Dict, List, Optional
 import os
 import openai
+from openai import OpenAI
 from datetime import datetime
 import httpx
 
