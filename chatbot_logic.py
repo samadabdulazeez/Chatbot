@@ -7,7 +7,6 @@ from typing import Dict, List, Optional
 import os
 from openai import OpenAI
 from datetime import datetime
-import httpx
 
 class BasketballChatbot:
     def __init__(self, csv_path: str = 'NBA-playerlist.csv'):
