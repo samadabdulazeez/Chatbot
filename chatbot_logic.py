@@ -9,7 +9,7 @@ import openai
 from datetime import datetime
 
 class BasketballChatbot:
-    def __init__(self, csv_path: str = '/Users/samadabdulazeez/Documents/basketball chatbot/NBA-playerlist.csv'):
+    def __init__(def __init__(self, csv_path: str = 'NBA-playerlist.csv'):
         self.players_data = self._load_players_csv(csv_path)
         # Initialize OpenAI client
         self.openai_client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
