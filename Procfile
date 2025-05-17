@@ -1,1 +1,1 @@
-web: gunicorn basketball:app 
+web: gunicorn basketball:app
