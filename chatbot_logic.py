@@ -36,7 +36,7 @@ class BasketballChatbot:
                 system_message += f"Here are the NBA champions from 2022-2024:\n{champions_info}\n"
             
             response = self.openai_client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": system_message},
                     {"role": "user", "content": prompt}
